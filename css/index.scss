@@ -62,9 +62,11 @@ html, body {
         border: none;
         color: #fff;
         cursor: pointer;
+        font-size: 16px;
         padding: 20px 15px;
-        width: 100%;
+        text-transform: capitalize;
         transition: .4s all;
+        width: 100%;
         &:hover {
             background-color: lighten(#626fe4, 10%);
             transition: .4s all;
