@@ -1,5 +1,5 @@
-// Your web app's Firebase configuration
-var firebaseConfig = {
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
     apiKey: "AIzaSyBJb6hOvbXGWxLvqbAiyFZErREBNfPE4ro",
     authDomain: "giftlist-e27ea.firebaseapp.com",
     databaseURL: "https://giftlist-e27ea.firebaseio.com",
@@ -10,3 +10,33 @@ var firebaseConfig = {
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
+
+  var app = new Vue({
+    el: '#app',
+    data: {
+      userName: 'Fulano',
+      products: []
+    },
+    mounted: function () {
+      this.loadProducts();
+    },
+    methods: {
+      addItemGiftList: function(idProduct) {
+        console.log(idProduct);
+      },
+      loadProducts: function() {
+        var vm = this;
+        firebase.database().ref('products').on('value', function (snapshot) {
+          vm.products = [];
+          snapshot.forEach(function(item){
+            vm.products.push({
+              id: item.key,
+              name: item.val().name,
+              imgUrl: item.val().imgUrl,
+              signed: item.val().signed
+            });
+          });
+        });
+      }
+    }
+  })

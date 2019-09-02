@@ -32,19 +32,29 @@ html, body {
 
 .container-description {
   text-align: center;
+  padding: 0 15px;
 }
 
 .container-description .text-description {
   font-size: 16px;
 }
 
+@media (max-width: 575.98px) {
+  .container-description .text-description {
+    font-size: 14px;
+  }
+}
+
 .flex-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-top: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .flex-container .card {
@@ -64,6 +74,7 @@ html, body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 10px;
 }
 
 .flex-container .card-content {
