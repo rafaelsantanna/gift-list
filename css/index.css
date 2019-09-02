@@ -106,9 +106,15 @@ html, body {
 }
 
 .flex-container .card-btn:hover {
-  background-color: #8e97eb;
+  background-color: #3647dd;
   -webkit-transition: .4s all;
   transition: .4s all;
+}
+
+.flex-container .card-btn:disabled {
+  background-color: #626fe4;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: not-allowed;
 }
 
 .mt-3 {

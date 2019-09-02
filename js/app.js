@@ -21,8 +21,10 @@
       this.loadProducts();
     },
     methods: {
-      addItemGiftList: function(idProduct) {
-        console.log(idProduct);
+      addItemGiftList: function(productId) {
+        firebase.database().ref('products/' + productId).update({
+          signed: true,
+        });
       },
       loadProducts: function() {
         var vm = this;
