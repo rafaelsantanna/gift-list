@@ -14,7 +14,7 @@
         <div class="menu-container">
             <nav class="menu">
                 <span class="menu-user">Olá, {{userName}}</span>
-                <div class="menu-logout">Logout</div>
+                <div class="menu-logout"><img src="./img/sign-out.svg" alt="icon sign-out"></div>
             </nav>
         </div>
 
@@ -29,6 +29,7 @@
         <div class="flex-container">
             <div class="card" v-for="item in products">
                 <div class="card-content">
+                    <img class="card-cancel-sign" src="./img/cancel.svg" />
                     <img class="card-image" :src="item.imgUrl" />
                     <p class="card-description">{{item.name}}</p>
                 </div>

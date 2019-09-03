@@ -30,6 +30,12 @@ html, body {
   margin-bottom: 15px;
 }
 
+.menu-container .menu .menu-logout img {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+}
+
 .container-description {
   text-align: center;
   padding: 0 15px;
@@ -79,6 +85,21 @@ html, body {
 
 .flex-container .card-content {
   padding: 20px;
+  position: relative;
+}
+
+.flex-container .card-cancel-sign {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 15px;
+  right: 15px;
+  opacity: .5;
+  cursor: pointer;
+}
+
+.flex-container .card-cancel-sign:hover {
+  opacity: .75;
 }
 
 .flex-container .card-image {

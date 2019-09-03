@@ -19,6 +19,14 @@ html, body {
         justify-content: space-between;
         padding: 10px 15px;
         margin-bottom: 15px;
+
+        .menu-logout {
+            img {
+                cursor: pointer;
+                width: 25px;
+                height: 25px;
+            }
+        }
     }
 }
 
@@ -53,6 +61,19 @@ html, body {
     }
     .card-content {
         padding: 20px;
+        position: relative;
+    }
+    .card-cancel-sign {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 15px;
+        right: 15px;
+        opacity: .5;
+        cursor: pointer;
+        &:hover {
+            opacity: .75;
+        }
     }
     .card-image {
         width: 100%;
