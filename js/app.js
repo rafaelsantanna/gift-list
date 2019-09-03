@@ -26,6 +26,11 @@
           signed: true,
         });
       },
+      removeItemGiftList: function(productId) {
+        firebase.database().ref('products/' + productId).update({
+          signed: false,
+        });
+      },
       loadProducts: function() {
         var vm = this;
         firebase.database().ref('products').on('value', function (snapshot) {
